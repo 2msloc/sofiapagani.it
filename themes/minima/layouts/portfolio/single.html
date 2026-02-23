@@ -11,9 +11,9 @@
   </header>
 
   <div class="project-gallery" role="list" aria-label="Photo gallery">
-    {{ range .Params.images }}
+    {{ range $i, $img := .Params.images }}
     <div class="project-gallery-item reveal" role="listitem">
-      <img src="{{ (printf "images/portfolio/%s" .) | relURL }}" alt="{{ $.Title }}" loading="lazy">
+      <img src="{{ (printf "images/portfolio/%s" $img) | relURL }}" alt="{{ $.Title }} — photo {{ add $i 1 }}" loading="lazy">
     </div>
     {{ end }}
   </div>

@@ -16,7 +16,8 @@
   <meta property="og:locale:alternate" content="it_IT">
   <meta property="og:locale:alternate" content="fr_FR">
   <meta property="og:locale:alternate" content="de_DE">
-  {{ with .Params.cover }}<meta property="og:image" content="{{ (printf "images/portfolio/%s" .) | absURL }}">{{ end }}
+  {{ with .Params.cover }}<meta property="og:image" content="{{ (printf "images/portfolio/%s" .) | absURL }}">{{ else }}{{ if .IsHome }}{{ $first := index (where .Site.RegularPages "Section" "portfolio") 0 }}{{ with $first.Params.cover }}<meta property="og:image" content="{{ (printf "images/portfolio/%s" .) | absURL }}">{{ end }}{{ end }}{{ end }}
+  <meta property="og:site_name" content="{{ .Site.Title }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">

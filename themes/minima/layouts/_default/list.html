@@ -5,7 +5,7 @@
   <a href="{{ .RelPermalink }}" class="project-card reveal" role="listitem">
     <div class="project-card-image">
       {{ with .Params.cover }}
-      <img src="{{ (printf "images/portfolio/%s" .) | relURL }}" alt="{{ $.Title }}" loading="lazy">
+      <img src="{{ (printf "images/portfolio/%s" .) | relURL }}" alt="{{ $.Title }} — {{ $.Params.category }}" loading="lazy">
       {{ end }}
       <div class="project-card-overlay">
         <span class="project-card-line"></span>
