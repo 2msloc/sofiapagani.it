@@ -1,0 +1,29 @@
+baseURL = "https://sofiapagani.it/"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "Sofia Pagani"
+theme = "minima"
+
+[params]
+  author = "Sofia Pagani"
+  tagline = "Editorial & Fashion Photographer"
+  description = "Sofia Pagani — Editorial and fashion photographer. Portfolio of fashion, portrait and fine art photography. | Fotografa editoriale e di moda. Portfolio di fotografia fashion, ritratto e fine art. | Photographe éditoriale et de mode. Portfolio de photographie fashion, portrait et fine art. | Editorial- und Modefotografin. Portfolio für Fashion-, Porträt- und Fine-Art-Fotografie."
+  keywords = "Sofia Pagani, photographer, fashion, editorial, portrait, fine art, photography, portfolio, fotografa, moda, editoriale, ritratto, fotografia, photographe, mode, porträt, modefotografie"
+  email = "info@sofiapagani.it"
+  instagram = "https://instagram.com/quietssofy"
+
+[menu]
+  [[menu.main]]
+    name = "Contact"
+    url = "/contatti/"
+    weight = 1
+
+[taxonomies]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML"]

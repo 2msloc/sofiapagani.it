@@ -1,0 +1,9 @@
+name = "Minima"
+license = "MIT"
+licenselink = ""
+description = "Minimal abstract photography portfolio theme"
+tags = ["portfolio", "photography", "minimal"]
+min_version = "0.100.0"
+
+[author]
+  name = "Sofia Pagani"

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="project-grid" aria-label="Selected projects">
+  {{ $projects := where .Site.RegularPages "Section" "portfolio" }}
+  {{ range ($projects.ByWeight) }}
+  <a href="{{ .RelPermalink }}" class="project-card reveal">
+    <div class="project-card-image">
+      {{ with .Params.cover }}
+      <img src="{{ (printf "images/portfolio/%s" .) | relURL }}" alt="{{ $.Title }}" loading="lazy">
+      {{ end }}
+      <div class="project-card-overlay">
+        <span class="project-card-line"></span>
+        <span class="project-card-code">{{ .Params.code }}</span>
+        <h2 class="project-card-title">{{ .Title }}</h2>
+        <p class="project-card-desc">{{ .Params.description }}</p>
+        <span class="project-card-cat">{{ .Params.category }}</span>
+      </div>
+    </div>
+  </a>
+  {{ end }}
+</section>
+{{ end }}

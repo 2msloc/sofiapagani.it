@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article>
+  <header class="project-header">
+    <span class="project-header-line"></span>
+    <span class="project-header-code">{{ .Params.code }}</span>
+    <h1>{{ .Title }}</h1>
+    <div class="project-header-meta">
+      {{ with .Params.category }}<span class="project-header-cat">{{ . }}</span>{{ end }}
+      {{ with .Params.description }}<p class="project-header-desc">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+
+  <div class="project-gallery" role="list" aria-label="Photo gallery">
+    {{ range .Params.images }}
+    <div class="project-gallery-item reveal" role="listitem">
+      <img src="{{ (printf "images/portfolio/%s" .) | relURL }}" alt="{{ $.Title }}" loading="lazy">
+    </div>
+    {{ end }}
+  </div>
+</article>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Enlarged image" aria-hidden="true">
+  <img src="" alt="">
+</div>
+{{ end }}

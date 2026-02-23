@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="contact-page reveal" aria-label="Contact">
+  <h1>{{ .Title }}</h1>
+  <div class="contact-body">{{ .Content }}</div>
+  <div class="contact-links">
+    {{ with .Site.Params.instagram }}<a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
+    {{ with .Site.Params.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+  </div>
+</section>
+{{ end }}
