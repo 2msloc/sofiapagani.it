@@ -26,4 +26,4 @@ theme = "minima"
       unsafe = true
 
 [outputs]
-  home = ["HTML"]
+  home = ["HTML", "RSS"]

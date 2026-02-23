@@ -21,6 +21,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}">
+  <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{ with .Params.cover }}<meta name="twitter:image" content="{{ (printf "images/portfolio/%s" .) | absURL }}">{{ end }}
+  {{ if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "{{ .Site.Params.author }}",
+    "description": "{{ .Site.Params.tagline }}",
+    "url": "{{ .Site.BaseURL }}",
+    "image": "{{ "favicon.svg" | absURL }}",
+    "email": "{{ .Site.Params.email }}",
+    "sameAs": [
+      "{{ .Site.Params.instagram }}"
+    ],
+    "knowsAbout": ["Fashion Photography", "Editorial Photography", "Portrait Photography"]
+  }
+  </script>
+  {{ end }}
+  {{ if and .IsPage (eq .Section "portfolio") }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "{{ .Title }}",
+    "description": "{{ .Params.description }}",
+    "url": "{{ .Permalink }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ .Site.Params.author }}"
+    },
+    "genre": "{{ .Params.category }}"{{ with .Params.cover }},
+    "image": "{{ (printf "images/portfolio/%s" .) | absURL }}"{{ end }}
+  }
+  </script>
+  {{ end }}
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
