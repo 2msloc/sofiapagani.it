@@ -2,14 +2,14 @@
 title: "LA MARTINA"
 code: "LM—26"
 category: "New Collection - Spring/Summer 2026"
-cover: "lamartina-cover.jpg"
+cover: "lamartina-cover.webp"
 weight: 2
 description: "Elegance in motion. A visual journey through La Martina's latest collection."
 images:
-  - "lamartina-cover.jpg"
-  - "lamartina-01.jpg"
-  - "lamartina-02.jpg"
-  - "lamartina-03.jpg"
-  - "lamartina-04.jpg"
-  - "lamartina-05.jpg"
+  - "lamartina-cover.webp"
+  - "lamartina-01.webp"
+  - "lamartina-02.webp"
+  - "lamartina-03.webp"
+  - "lamartina-04.webp"
+  - "lamartina-05.webp"
 ---
