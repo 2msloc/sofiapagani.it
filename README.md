@@ -52,7 +52,7 @@ Delete the `.md` from `content/portfolio/`.
 Edit `hugo.toml` → `[params]`:
 
 ```toml
-email = "info@sofiapagani.it"
+email = ""
 instagram = "https://instagram.com/quietssofy"
 ```
 
