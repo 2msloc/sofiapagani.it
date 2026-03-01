@@ -18,9 +18,9 @@ Requires `hugo >= 0.100` (extended).
 1. Add photos to `static/images/portfolio/`:
 
 ```
-project-name-cover.jpg
-project-name-01.jpg
-project-name-02.jpg
+project-name-cover.webp
+project-name-01.webp
+project-name-02.webp
 ```
 
 2. Create `content/portfolio/project-name.md`:
@@ -30,12 +30,12 @@ project-name-02.jpg
 title: "Project Name"
 code: "PN—05"
 category: "Portrait"
-cover: "project-name-cover.jpg"
+cover: "project-name-cover.webp"
 weight: 5
 description: "One sentence."
 images:
-  - "project-name-01.jpg"
-  - "project-name-02.jpg"
+  - "project-name-01.webp"
+  - "project-name-02.webp"
 ---
 ```
 
@@ -73,13 +73,13 @@ GitHub Pages with custom domain `sofiapagani.it`.
 ```
 content/
   _index.md
-  contatti.md
+  contact.md
   portfolio/
     _index.md
-    silenzi-urbani.md
-    volti-sospesi.md
-    materia-prima.md
-    confini.md
+    humana.md
+    la-martina.md
+    ainhoa-zazo-atelier.md
+    sweet-chaos.md
 
 static/
   CNAME
