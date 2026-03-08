@@ -1,4 +1,8 @@
 {{ define "main" }}
+<div class="scroll-hint" aria-hidden="true">
+  <span class="scroll-hint-label">scroll</span>
+  <span class="scroll-hint-arrow"></span>
+</div>
 <section class="project-grid" aria-label="Selected projects">
   {{ $projects := where .Site.RegularPages "Section" "portfolio" }}
   {{ range ($projects.ByWeight) }}

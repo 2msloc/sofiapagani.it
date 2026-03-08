@@ -14,6 +14,8 @@ document.querySelectorAll('.project-gallery img').forEach(i=>{i.addEventListener
 lb.addEventListener('click',close);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 }
+const sh=document.querySelector('.scroll-hint');
+if(sh){const hide=()=>{if(window.scrollY>80){sh.classList.add('hidden');window.removeEventListener('scroll',hide)}};window.addEventListener('scroll',hide,{passive:true})}
 const r=document.querySelectorAll('.reveal');
 if(r.length&&'IntersectionObserver'in window){
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.05,rootMargin:'0px 0px -40px 0px'});
