@@ -10,4 +10,5 @@ images:
   - "lm26-01.webp"
   - "lm26-02.webp"
   - "lm26-03.webp"
+  - "lm26-04.webp"
 ---
